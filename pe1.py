@@ -1,20 +1,25 @@
-'''
-Project Euler - Problem 1
-2018-04-15 Frevel
-'''
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr 24 16:16:10 2018
 
-def sum_multiples(x):
+@author: Frevel
+"""
+
+def sum_multiples(limit):
     '''
+    Computes the multiples of 3 and 5 up to limit and returns the sum of these
+    multiples.
+    
     x (int) : upper limit
-    Returns (int): the sum of all multiples of 3 and 5
-    below x
+    Returns int
     '''
     sum = 0
-    for i in range(0, x, 3):
+    for i in range(0, limit, 3):
         if i % 5 != 0: sum += i
-    for i in range(0, x, 5):
+    for i in range(0, limit, 5):
         sum += i
     return sum
 
 
-print(sum_multiples(1000))
+print(sum_multiples(int(input("Get the sum of multiples of 3 and 5 up to: "))))
